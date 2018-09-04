@@ -1,2 +1,2 @@
 # React-Component
-React-Component Write by my self(React-bootstrap)
+React-Component Write by Craig
