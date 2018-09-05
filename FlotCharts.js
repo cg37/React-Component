@@ -20,7 +20,7 @@ import FormControlFeedback from 'react-bootstrap/lib/FormControlFeedback';
 class OpenStack extends Component {
   render(){
         return(
-        <Panel header={<span>Openstack</span>} bsStyle="info">
+        <Panel header={<span>Panel1</span>} bsStyle="info">
             <div>
                 <div className="dataTable_wrapper">
                     <div className="row">
@@ -29,15 +29,14 @@ class OpenStack extends Component {
                                 <ControlLabel>Controller</ControlLabel>
                                 <FormControl
                                         type="text"
-                                        placeholder="Openstack Controller IP"
+                                        placeholder="Panel_name"
                                     />
                                 <FormControlFeedback />
                             </FormGroup>
-
                             <FormGroup
                                 controlId="formBasicFile"
                             >
-                                <ControlLabel>Upload Openstack Config</ControlLabel>
+                                <ControlLabel>Panel_index</ControlLabel>
                                 <FormControl
                                     type="file"
                                 />
@@ -60,16 +59,16 @@ class CBTS extends Component {
     }
     render(){
         return(
-            <Panel header={<span>CBTS</span>} bsStyle="info">
+            <Panel header={<span>Panel_2</span>} bsStyle="info">
             <div>
                 <div className="dataTable_wrapper">
                     <div className="row">
                         <div className="col-lg-6">
                             <FormGroup controlId="formBasicText2">
-                                <ControlLabel>OAM IP</ControlLabel>
+                                <ControlLabel>Panel_name</ControlLabel>
                                 <FormControl
                                     type="text"
-                                    placeholder="Openstack Controller IP"
+                                    placeholder="Panel_name"
                                 />
                                 <FormControlFeedback />
                             </FormGroup>
@@ -114,22 +113,22 @@ class RapInit extends Component {
         render() {
             return (
             <div>
-                <Panel header={<span>RAP</span>} bsStyle="info">
+                <Panel header={<span>Panel_3</span>} bsStyle="info">
                 <div>
-                    <Button bsStyle="primary" onClick={this.add} >Add RAP</Button>
+                    <Button bsStyle="primary" onClick={this.add} >Add Panel</Button>
                 </div>
                 <div>
                 <br />
                 </div>
                 
                 {this.state.lists.map(function (item,index) {
-                    return <RapInfo key={item?item:index} index={index} delete={this.delete} upData={this.upData}  item={item}/>
+                    return <PanelInfo key={item?item:index} index={index} delete={this.delete} upData={this.upData}  item={item}/>
                 }.bind(this))}
                 </Panel>
             </div>)
         }
         }
-class RapInfo extends Component{
+class PanelInfo extends Component{
     constructor(props){
         super(props);
         this.upData=this.upData.bind(this);
